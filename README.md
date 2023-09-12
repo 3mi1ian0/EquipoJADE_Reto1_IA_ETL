@@ -6,6 +6,63 @@ Dentro de este repositorio se encuentra un archivo ".pdf" ("Reto_Limpieza_Conjun
 
 **IMPORTANTE:** Para correr el código de la notebook ("ETL_revisión_JADE.ipynb") dentro del ".zip" es NECESARIO haber descargado en su equipo de computo el archivo comprimido "Avance1_Equipo_JADE.zip" y descomprimirlo para poder acceder a los archivos de su interior; una vez realizado lo anterior para ver el correcto funcionamiento del código debe de modificar las reutas de acceso dentro de la segunda celda de la notebook ("ETL_revisión_JADE.ipynb") por la dirección en la que haya guardado la carpeta descomprimida con todos los archivos del dataset dentro de su equipo de computo. Deben de concordar el archivo al que esta llamando con el nombre de la variable dentro del código.
 
+# Descripción de los datos
+
+### train.csv
+
+El archivo `train.csv` contiene datos de entrenamiento para un problema de series temporales. Incluye información sobre las ventas de productos en diferentes tiendas a lo largo del tiempo. Los campos principales en este archivo son:
+
+- **store_nbr**: Identifica la tienda en la que se venden los productos.
+- **family**: Identifica el tipo de producto vendido.
+- **sales**: Representa las ventas totales de una familia de productos en una tienda en una fecha específica. Las ventas pueden ser valores fraccionarios debido a la posibilidad de vender productos en unidades fraccionarias.
+- **onpromotion**: Indica el número total de artículos de una familia de productos que estaban en promoción en una tienda en una fecha determinada.
+
+### test.csv
+
+El archivo `test.csv` contiene datos de prueba que tienen las mismas características que los datos de entrenamiento. El objetivo es predecir las ventas futuras para las fechas en este archivo. Es importante destacar que las fechas en el archivo de prueba son para los 15 días posteriores a la última fecha en el archivo de entrenamiento.
+
+### sample_submission.csv
+
+El archivo `sample_submission.csv` es un archivo de muestra que sigue el formato correcto para presentar las predicciones.
+
+- **id**: El cual es un identificador para las ventas futuras que se predicen
+- **sales**: Muestra la proyección  relacionada al id previo
+
+
+### stores.csv
+
+El archivo `stores.csv` contiene metadatos sobre las tiendas que están involucradas en el conjunto de datos. Incluye información sobre la ciudad:
+
+- **store_nbr**: El cual es un numero que identifica a la tienda en particular
+- **city**: Muestra las ciudades donde se ubica la tienda
+- **state**: Muestra el estado donde se ubica la tienda
+- **type**: Sin descripción en particular
+- **cluster**: Sin descripción en particular
+
+
+### oil.csv
+
+El archivo `oil.csv` proporciona datos diarios sobre los precios del petróleo. Estos datos son relevantes tanto para el período de entrenamiento como para el período de prueba. Dado que Ecuador depende en gran medida del petróleo en términos económicos, las fluctuaciones en los precios del petróleo pueden tener un impacto significativo en las ventas de productos.
+- **date**: Muestra una fecha en particular
+- **dcoilwtico**: Muestra el precio del barril de petróleo el en un día en particular
+ 
+
+### holidays_events.csv
+
+El archivo `holidays_events.csv` contiene información sobre días festivos y eventos, junto con metadatos. Es importante prestar atención a la columna "transferred", que indica si un día festivo fue oficialmente transferido a otra fecha por el gobierno. En algunos casos, un día festivo puede ser celebrado en una fecha diferente a la del calendario. También se menciona la columna "type", que describe el tipo de día festivo (como "Transfer" para días transferidos y "Bridge" para días adicionales agregados a un día festivo).
+
+Además, el conjunto de datos puede incluir días festivos adicionales agregados a días festivos regulares, como suele ocurrir alrededor de la Navidad (haciendo que la Nochebuena sea un día festivo). Estos días adicionales a menudo se compensan con días de trabajo tipo "Work Day" que no están programados normalmente para trabajar (por ejemplo, sábados) y están destinados a compensar los días festivos adicionales.
+
+
+- **date**: Identifica la tienda en la que se venden los productos.
+- **type**: Indica el tipo de festividad tales como Holidays, Events, Work day etc.
+- **locale**: Indica el alcance de la festividad
+- **locale_name**: Indica el número total de artículos de una familia de productos que estaban en promoción en una tienda en una fecha determinada.
+
+- **description**: Descripcion del la festividad
+
+- **transferred**: De tipo booleano que indica si un día festivo que se transfiere oficialmente cae en ese día calendario.
+
 # Normativas de Kaggle
 
 De acuerdo con las normativas de la plataforma **Kaggle**, al participar en el concurso, los miembros de un equipo deben tener en cuenta ciertas consideraciones específicas:
