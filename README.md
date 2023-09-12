@@ -6,6 +6,21 @@ Dentro de este repositorio se encuentra un archivo ".pdf" ("Reto_Limpieza_Conjun
 
 **IMPORTANTE:** Para correr el código de la notebook ("ETL_revisión_JADE.ipynb") dentro del ".zip" es NECESARIO haber descargado en su equipo de computo el archivo comprimido "Avance1_Equipo_JADE.zip" y descomprimirlo para poder acceder a los archivos de su interior; una vez realizado lo anterior para ver el correcto funcionamiento del código debe de modificar las reutas de acceso dentro de la segunda celda de la notebook ("ETL_revisión_JADE.ipynb") por la dirección en la que haya guardado la carpeta descomprimida con todos los archivos del dataset dentro de su equipo de computo. Deben de concordar el archivo al que esta llamando con el nombre de la variable dentro del código.
 
+# Normativas de Kaggle
+
+De acuerdo con las normativas de la plataforma **Kaggle**, al participar en el concurso, los miembros de un equipo deben tener en cuenta ciertas consideraciones específicas:
+
+- No está permitido transmitir, duplicar, publicar, redistribuir ni proporcionar los Datos del Concurso a terceros que no estén participando en el Concurso. Cualquier posible transmisión o acceso no autorizado a los Datos de la Competencia debe notificarse inmediatamente a Kaggle, y se debe colaborar con Kaggle para corregir cualquier transmisión o acceso no autorizado.
+
+## Uso de Datos Externos
+
+En cuanto al uso de los datos, se permite la utilización de datos externos además de los proporcionados por la competencia, siempre y cuando estos datos externos sean públicos y estén disponibles de forma gratuita para todos los participantes. Sin embargo, es importante destacar que esta posibilidad de utilizar datos externos no exime a los participantes de sus otras responsabilidades y obligaciones según las reglas de la competencia, incluidas aquellas relacionadas con los ganadores.
+
+## Finalidad Académica
+
+En resumen, nuestro equipo no tiene ningún problema con los términos y condiciones establecidos en la plataforma. El uso que hacemos de los datos es exclusivamente con fines académicos, con el objetivo de poner a prueba nuestra capacidad en el análisis de datos.
+
+
 # Licencias de Bibliotecas Python
 
 A continuación se presentan las licencias de las bibliotecas Python comúnmente utilizadas en análisis de datos y aprendizaje automático:
