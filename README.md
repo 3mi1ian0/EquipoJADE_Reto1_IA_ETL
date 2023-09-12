@@ -18,7 +18,7 @@ A continuación se presentan las licencias de las bibliotecas Python comúnmente
 ## Seaborn
 - **Licencia:** Seaborn utiliza una licencia estilo BSD.
 - **Descripción:** Seaborn es una biblioteca de visualización de datos basada en Matplotlib. Proporciona una interfaz de alto nivel para crear gráficos estadísticos atractivos.
-- **Sitio web oficial:** [Seaborn License](https://seaborn.pydata.org/license.html)
+- **Sitio web oficial:** [Seaborn License](https://seaborn.pydata.org)
 
 ## Pandas
 - **Licencia:** Pandas utiliza la licencia BSD de 3 cláusulas.
@@ -36,7 +36,7 @@ A continuación se presentan las licencias de las bibliotecas Python comúnmente
 - **Sitio web oficial:** [Scikit-Learn License](https://scikit-learn.org/stable/whats_new/v1.1.0.html#id9)
 
 ## TensorFlow
-- **Licencia:** TensorFlow utiliza la licencia Apache 2.0, que es una licencia de código abierto que permite el uso, la modificación y la distribución del software, siempre y cuando se cumplan ciertas condiciones. Consulta la [licencia de TensorFlow](https://www.tensorflow.org/license) para obtener más detalles.
+- **Licencia:** TensorFlow utiliza la licencia Apache 2.0, que es una licencia de código abierto que permite el uso, la modificación y la distribución del software, siempre y cuando se cumplan ciertas condiciones. Consulta la [licencia de TensorFlow](https://github.com/tensorflow/tensorflow/blob/master/LICENSE) para obtener más detalles.
 - **Descripción:** TensorFlow es una biblioteca de código abierto desarrollada por Google para el aprendizaje automático y el aprendizaje profundo. Es ampliamente utilizado en la investigación y la producción de modelos de aprendizaje automático.
 - **Sitio web oficial:** [TensorFlow](https://www.tensorflow.org/)
 
