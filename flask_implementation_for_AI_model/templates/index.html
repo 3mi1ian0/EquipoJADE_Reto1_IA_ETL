@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sales Prediction</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <h1 class="jumbotron bg-primary">Sales Prediction</h1>
+    <br><br>
+    <form class="form-horizontal" action="/predict" method="post">
+        <!-- Day and Month -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="day">Select Day:</label>
+            <div class="col-sm-2">
+                <select class="form-control" name="day" id="day">
+                    {% for day in days %}
+                        <option value="{{ day }}">{{ day }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <label class="control-label col-sm-2" for="month">Select Month:</label>
+            <div class="col-sm-2">
+                <select class="form-control" name="month" id="month">
+                    {% for month in months %}
+                        <option value="{{ month }}">{{ month }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Type -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="type_nbr">Select Type:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="type_nbr" id="type_nbr">
+                    {% for type in types %}
+                        <option value="{{ type }}">{{ type }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Store Number -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="store_nbr">Select Store Number:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="store_nbr" id="store_nbr">
+                    {% for store_nbr in store_nbrs %}
+                        <option value="{{ store_nbr }}">{{ store_nbr }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- State -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="state">Select State:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="state" id="state">
+                    {% for state in states %}
+                        <option value="{{ state }}">{{ state }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Family -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="family">Select Family:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="family" id="family">
+                    {% for family in families %}
+                        <option value="{{ family }}">{{ family }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Onpromotion -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="onpromotion_nbr">Select Onpromotion:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="onpromotion_nbr" id="onpromotion_nbr">
+                    {% for onpromotion in onpromotions %}
+                        <option value="{{ onpromotion }}">{{ onpromotion }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Weekday -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="weekd">Select Weekday:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="weekd" id="weekd">
+                    {% for weekday in weekday %}
+                        <option value="{{ weekday }}">{{ weekday }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Payday -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="payd">Select Payday:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="payd" id="payd">
+                    {% for payday in payday %}
+                        <option value="{{ payday }}">{{ payday }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- City Number -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="city_nbr">Select City Number:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="city_nbr" id="city_nbr">
+                    {% for city in city %}
+                        <option value="{{ city }}">{{ city }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Cluster Number -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="cluster_nbr">Select Cluster Number:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="cluster_nbr" id="cluster_nbr">
+                    {% for cluster in cluster %}
+                        <option value="{{ cluster }}">{{ cluster }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Event Name -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="event_n">Select Event Name:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="event_n" id="event_n">
+                    {% for event in event_name %}
+                        <option value="{{ event }}">{{ event }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Earthquake -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="earth">Select Earthquake:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="earth" id="earth">
+                    {% for eq in earthquake %}
+                        <option value="{{ eq }}">{{ eq }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Local Holiday Name -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="local_h_name">Select Local Holiday Name:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="local_h_name" id="local_h_name">
+                    {% for local_holiday in local_holiday_name %}
+                        <option value="{{ local_holiday }}">{{ local_holiday }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Regional Holiday Name -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="regional_h_name">Select Regional Holiday Name:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="regional_h_name" id="regional_h_name">
+                    {% for regional_holiday in regional_holiday_name %}
+                        <option value="{{ regional_holiday }}">{{ regional_holiday }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- National Holiday Name -->
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="national_h_name">Select National Holiday Name:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="national_h_name" id="national_h_name">
+                    {% for national_holiday in national_holiday_name %}
+                        <option value="{{ national_holiday }}">{{ national_holiday }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success">Predict Sales</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Prediction -->
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            {% if prediction %}
+            <div class="text-center">
+                <h2>Predicted Sales: <i>{{ prediction }}</i></h2>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if error_message %}
+    <h2>Error: <i>{{ error_message }}</i></h2>
+    {% endif %}
+
+</div>
+</body>
+</html>
