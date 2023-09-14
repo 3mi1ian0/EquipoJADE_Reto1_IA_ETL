@@ -1,6 +1,6 @@
 # Implementacion de una interfaz basada en flask
 
-##Esta API de Flask sirve como interfaz web para realizar predicciones de ventas utilizando un modelo XGBoost. Las características y componentes clave incluyen:
+## Esta API de Flask sirve como interfaz web para realizar predicciones de ventas utilizando un modelo XGBoost. Las características y componentes clave incluyen:
 
 - **Selección desplegable**: Los usuarios pueden seleccionar varios parámetros como día, mes, número de tienda y más a través de menús desplegables.
 
@@ -14,7 +14,7 @@
 
 - **Consideraciones de seguridad**: Aunque no se detalla en la plantilla, los datos de entrada deben ser validados y desinfectados en el lado del servidor para evitar vulnerabilidades de seguridad.
 
-##Plantilla HTML (index.html):
+## Plantilla HTML (index.html):
 
 Esta plantilla HTML es la interfaz de usuario para la API de Flask. Los elementos clave y funcionalidades incluyen:
 
