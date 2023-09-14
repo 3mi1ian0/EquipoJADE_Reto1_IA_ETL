@@ -1,6 +1,29 @@
 # Escuadrón JADE 
-### IA - Reto1_ETL
+## IA - Reto1_ETL
 Momento de Retroalimentación: Reto Limpieza del Conjunto de Datos
+
+## Introducción
+Este README proporciona una descripción general de un código de análisis y modelado de datos que utiliza la biblioteca XGBoost para predecir ventas en un contexto de series de tiempo. El código incluye el preprocesamiento de datos, la ingeniería de características y la evaluación de modelos. A continuación, se detalla el contenido y el flujo de trabajo del código.
+
+## Descripción general
+El código proporcionado aborda el problema de predecir las ventas en un contexto de series de tiempo. Utiliza un conjunto de datos que incluye información sobre ventas, fechas, feriados, ubicaciones de tiendas y más. El objetivo es crear un modelo predictivo basado en el algoritmo XGBoost para predecir las ventas futuras en función de diversas características.
+
+## Estructura del código
+El código se divide en varias secciones clave:
+
+1. **Carga de datos**: Se cargan varios conjuntos de datos CSV que contienen información sobre ventas, fechas, ubicaciones de tiendas, eventos, transacciones y más.
+
+2. **Preprocesamiento de datos**: Se realizan diversas transformaciones en los datos para prepararlos para el modelado. Esto incluye la extracción de información de fecha, la limpieza de datos, la codificación de etiquetas y la combinación de datos de múltiples fuentes.
+
+3. **Modelado con XGBoost**: Se utiliza la biblioteca XGBoost para entrenar un modelo de regresión que predice las ventas. Se configuran hiperparámetros específicos, como el número máximo de rondas de impulso y la velocidad de aprendizaje. El modelo se entrena y evalúa en conjuntos de entrenamiento y validación.
+
+4. **Evaluación del modelo**: Se calculan métricas de evaluación, como el RMSE (Root Mean Squared Error) y el RMSLE (Root Mean Squared Logarithmic Error), para evaluar el rendimiento del modelo en el conjunto de validación.
+
+5. **Gráficos de pérdida**: Se genera un gráfico que muestra cómo evoluciona la pérdida (RMSE) en el conjunto de entrenamiento y el conjunto de validación durante el entrenamiento del modelo.
+
+6. **Generación de predicciones**: El modelo entrenado se utiliza para realizar predicciones en un conjunto de prueba. Las predicciones se almacenan en un DataFrame y se invierte la transformación logarítmica aplicada anteriormente a las ventas.
+
+7. **Generación de un archivo de submisión**: Las predicciones se guardan en un archivo CSV llamado 'submission.csv', que se puede enviar como resultado final al desafío o competencia correspondiente.
 
 
 # Descripción de los datos
